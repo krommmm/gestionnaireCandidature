@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/css/index.css" />
+    <link rel="icon" href="./assets/pictures/icons/favicon.ico" type="image/x-icon">
+    <title>Recherche emploi</title>
+</head>
+
+<body>
+    <header>
+        <div class="header__links">
+            <a href="https://www.linkedin.com/"><img src="./assets/pictures/logos/linkedin_logo.png" /></a>
+            <a href="https://candidat.francetravail.fr/offres/emploi"><img class="bg_bordered"
+                    src="./assets/pictures/logos/poleEmploi_logo.png" /></a>
+            <a href="https://www.welcometothejungle.com/fr"><img src="./assets/pictures/logos/wttj_logo.png" /></a>
+            <a href="https://www.hellowork.com/fr-fr/"><img class="bg_bordered"
+                    src="./assets/pictures/logos/helloWork_logo.jpg" /></a>
+            <a href="https://welovedevs.com/"><img src="./assets/pictures/logos/weLoveDev_logo.jpg" /></a>
+        </div>
+        <div class="header_search">
+            <input type="text" id="input-search" placeholder="Saisir une entreprise" />
+            <div class="header_search__searchBtn">Search</div>
+        </div>
+    </header>
+    <div class="general">
+        <nav>
+            <div class="addFiche">Ajouter une fiche</div>
+            <div>Cv</div>
+            <div>Lettre de motivation</div>
+        </nav>
+
+
+        <main>
+            <h1 class="titrePresentation">Bienvenue sur votre gestionnaire de candidatures</h1>
+        </main>
+
+
+        <aside>
+            <div class="aside__tris">
+                <div class="tris__enCours">En cours</div>
+                <div class="tris__toutes">Toutes</div>
+                <div class="tris__contrat">Type de contrat</div>
+                <div class="tris__experience">Expérience</div>
+                <div class="tris__ville">Ville</div>
+                <div class="tris__posted">Postulé</div>
+                <div class="tris__called">Appelé</div>
+                <div class="tris__deleted">Deleted</div>
+            </div>
+            <div class="aside__fiches">
+
+            </div>
+        </aside>
+    </div>
+    <div class="modalFiche">
+        <div class="modalFiche__container">
+            <div class="leave">
+                <div class="btn leaveModal">Quitter</div>
+            </div>
+            <form>
+                <!-- inputs -->
+                <div>
+                    <label for="input-name">Nom</label>
+                    <input type="text" id="input-name" name="name" placeholder="name" />
+                </div>
+                <div>
+                    <label for="input-contrat">Choisir un type de contrat</label>
+                    <Select id="input-contrat" name="contrat">
+                        <option value="cdd">CDD</option>
+                        <option value="cdi">CDI</option>
+                        <option value="stage">Stage</option>
+                        <option value="alternance">Alternance</option>
+                    </Select>
+                </div>
+                <div>
+                    <label for="input-ville">Ville</label>
+                    <input type="text" id="input-ville" name="ville" placeholder="ville" />
+                </div>
+                <div>
+                    <label for="input-durée">Durée</label>
+                    <input type="text" id="input-durée" name="durée" placeholder="durée" />
+                </div>
+                <div>
+                    <label for="input-salaire">Salaire</label>
+                    <input type="text" id="input-salaire" name="salaire" placeholder="salaire" />
+                </div>
+                <!-- choix -->
+                <div>
+                    <label for="select-exp">Choisir une experience</label>
+                    <Select id="select-exp" name="experience">
+                        <option value="junior">Junior</option>
+                        <option value="premierEmploi">1er emploi</option>
+                        <option value="intermediaire">Intermédiaire</option>
+                        <option value="senior">Senior</option>
+                    </Select>
+                </div>
+                <div>
+                    <label for="select-techno">Choisir une spécialité</label>
+                    <Select id="select-techno" name="techno">
+                        <option value="back">back</option>
+                        <option value="front">front</option>
+                        <option value="fullstack">fullstack</option>
+                    </Select>
+                </div>
+                <!-- checkbox -->
+                <div>
+                    <label for="checkbox-isPost">Is posted</label>
+                    <input type="checkbox" id="checkbox-isPost" name="isPost" />
+                </div>
+                <div>
+                    <label for="checkbox-isCalled">Is called</label>
+                    <input type="checkbox" id="checkbox-isCalled" name="isCalled" />
+                </div>
+                <div>
+                    <label for="textarea-description">Description</label>
+                    <textarea id="textarea-description" name="description" placeholder="description"></textarea>
+                </div>
+                <button>Submit</button>
+            </form>
+
+        </div>
+    </div>
+    <footer>footer</footer>
+    <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>

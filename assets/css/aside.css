@@ -1,0 +1,87 @@
+aside {
+
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-name: rightToLeft;
+    opacity: 0;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    padding: 5px;
+    /* margin:15px 0px 15px 15px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px; */
+    height: 600px;
+    scroll-behavior: auto;
+    overflow-y: scroll;
+}
+
+@keyframes rightToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.aside__tris {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    padding: 10px;
+}
+
+.aside__tris div {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: black;
+    padding: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.aside__fiches_fiche {
+    border: 1px solid black;
+    margin: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.aside__fiches_fiche img {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    object-fit: fill;
+
+}
+
+.aside__fiches_fiche:hover {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+
+.aside__fiches_fiche h2 {
+    font-size: 20px;
+    padding: 5px;
+}
+
+.aside__tris div:hover {
+    color: black;
+    background: rgba(0, 0, 0, .1);
+    cursor: pointer;
+}
+
+.aside__tris div {
+    transition-duration: 0.4s;
+}
+
+.aside__tris div:active {
+    transform: scale(0.8);
+
+}

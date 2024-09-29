@@ -1,0 +1,132 @@
+.titrePresentation{
+    text-align:center;
+    margin-top:50px;
+}
+
+main {
+    margin-bottom: 50px;
+    animation-duration:1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-name: topToBottom;
+    opacity:0;
+    width:60%;
+    padding-bottom: 30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+@keyframes topToBottom{
+    0%{
+        opacity:0;
+        transform:translateY(-100px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0px);
+    }
+}
+
+.main__fiche {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin-top: 28px;
+    box-shadow: 8px 0px 28px -11px black;
+    border-radius: 15px;
+    padding-bottom: 30px;
+    animation-duration:1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-name: rightToLeft;
+    opacity:0;
+}
+@keyframes rightToLeft{
+    0%{
+        opacity:0;
+        transform:translateX(100px);
+    }
+    100%{
+        opacity:1;
+        transform:translateX(0px);
+    }
+}
+
+.main__fiche__header {
+    width: 100%;
+    height: 200px;
+    background-color: green;
+    position: relative;
+    margin-bottom: 50px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.main__fiche__header img {
+    width: 200px;
+    position: absolute;
+    left: 39%;
+    bottom: -50px;
+}
+
+.main__fiche__title {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 21px;
+}
+
+.main__fiche__title__tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main__fiche__title__tag {
+    background-color: aquamarine;
+    padding: 7px;
+    margin: 5px;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+.main__fiche__title__isBool {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.btn {
+   
+    
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin:10px;
+    border-radius:5px;
+}
+
+.validated {
+    background-color: green;
+}
+
+.main__fiche__title__description {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.main__fiche__title__description p {
+    width: 80%;
+}
+.deleteFiche_container{
+    width:100%;
+    display:flex;
+    justify-content:end;
+}
+.rond{
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit:cover;
+}
