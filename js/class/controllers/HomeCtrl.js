@@ -82,6 +82,7 @@ export class HomeCtrl {
         } else if (e.target.classList.contains("tris__enCours")) {
             const fichesEnCours = this.fichesList.getFiches().filter((cell) => !cell.deletedId);
             this.uiFiches.displayFiches(this.pokemons, fichesEnCours);
+            this.uiButtons.changeBgButton(e);
         } else if (e.target.classList.contains("tris__toutes")) {
             this.uiFiches.displayFiches(this.pokemons, this.fichesList.getFiches());
             this.uiButtons.changeBgButton(e);
