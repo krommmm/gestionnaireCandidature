@@ -1,9 +1,10 @@
 export class HomeCtrl {
-    constructor(modal, fiche, fichesList, uiFiches, localStorage) {
+    constructor(modal, fiche, fichesList, uiFiches, uiButtons, localStorage) {
         this.modal = modal;
         this.fiche = fiche;
         this.fichesList = fichesList;
         this.uiFiches = uiFiches;
+        this.uiButtons = uiButtons;
         this.localStorage = localStorage;
         this.pokemons = [];
         this.init();
@@ -14,6 +15,7 @@ export class HomeCtrl {
         this.pokemons = await this.getPokemons();
         const fichesEnCours = this.fichesList.getFiches().filter((cell) => !cell.deletedId);
         this.uiFiches.displayFiches(this.pokemons, fichesEnCours);
+        this.uiButtons.changeBgButton(null,true);
     }
 
     bindEvents() {
@@ -24,9 +26,9 @@ export class HomeCtrl {
     handleSubmit(e) {
         e.preventDefault();
         const ficheEnPreparation = this.modal.submitForm();
-        const names = this.fichesList.getFiches().map((cell)=>cell.name);
-        const cleanedNames = names.map((cell)=>(cell).toLowerCase().replace(" ",""));
-        if(cleanedNames.includes(ficheEnPreparation.name.toLowerCase().replace(" ",""))){
+        const names = this.fichesList.getFiches().map((cell) => cell.name);
+        const cleanedNames = names.map((cell) => (cell).toLowerCase().replace(" ", ""));
+        if (cleanedNames.includes(ficheEnPreparation.name.toLowerCase().replace(" ", ""))) {
             if (!confirm("Cette entreprise est déjà enregistrée, voullez-vous tout de même l'ajouter ? ")) {
                 return;
             }
@@ -82,24 +84,31 @@ export class HomeCtrl {
             this.uiFiches.displayFiches(this.pokemons, fichesEnCours);
         } else if (e.target.classList.contains("tris__toutes")) {
             this.uiFiches.displayFiches(this.pokemons, this.fichesList.getFiches());
+            this.uiButtons.changeBgButton(e);
         } else if (e.target.classList.contains("tris__contrat")) {
             const fichesEnCours = this.fichesList.getFiches().filter((cell) => !cell.deletedId);
             this.uiFiches.displayFiches(this.pokemons, fichesEnCours, "contrat");
+            this.uiButtons.changeBgButton(e);
         } else if (e.target.classList.contains("tris__experience")) {
             const fichesEnCours = this.fichesList.getFiches().filter((cell) => !cell.deletedId);
             this.uiFiches.displayFiches(this.pokemons, fichesEnCours, "experience");
+            this.uiButtons.changeBgButton(e);
         } else if (e.target.classList.contains("tris__ville")) {
             const fichesEnCours = this.fichesList.getFiches().filter((cell) => !cell.deletedId);
             this.uiFiches.displayFiches(this.pokemons, fichesEnCours, "ville");
+            this.uiButtons.changeBgButton(e);
         } else if (e.target.classList.contains("tris__posted")) {
             const fichesEnCours = this.fichesList.getFiches().filter((cell) => cell.isPost && !cell.deletedId);
             this.uiFiches.displayFiches(this.pokemons, fichesEnCours);
+            this.uiButtons.changeBgButton(e);
         } else if (e.target.classList.contains("tris__called")) {
             const fichesEnCours = this.fichesList.getFiches().filter((cell) => cell.isCalled && !cell.deletedId);
             this.uiFiches.displayFiches(this.pokemons, fichesEnCours);
+            this.uiButtons.changeBgButton(e);
         } else if (e.target.classList.contains("tris__deleted")) {
             const fichesEnCours = this.fichesList.getFiches().filter((cell) => cell.deletedId);
             this.uiFiches.displayFiches(this.pokemons, fichesEnCours);
+            this.uiButtons.changeBgButton(e);
         } else if (e.target.classList.contains("header_search__searchBtn")) {
             const potentialFiches = this.getFiche(e);
             this.uiFiches.displayFiches(this.pokemons, potentialFiches);

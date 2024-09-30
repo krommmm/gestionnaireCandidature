@@ -85,5 +85,9 @@ aside {
 
 .aside__tris div:active {
     transform: scale(0.8);
+}
 
+.pressed {
+    color: black;
+    background: rgba(0, 0, 0, .1);
 }
