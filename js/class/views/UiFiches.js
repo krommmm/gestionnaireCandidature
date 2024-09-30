@@ -132,15 +132,15 @@ export class UiFiches {
             img.className = "rond";
             img.src = "/assets/pictures/cartoons/deleted.webp";
         }
-        deleteFiche.className = "deleteFiche btn";
-        deleteFiche.textContent = "ranger dans les non reçus";
+        deleteFiche.className = "deleteFiche btn faillure";
+        deleteFiche.textContent = "Ranger dans les non reçus";
 
         const supprFiche = document.createElement("div");
 
         supprFiche.className = "deleteFiche_container";
         const supprFicheBtn = document.createElement("div");
         supprFicheBtn.textContent = "Supprimer la fiche";
-        supprFicheBtn.className = "supprFicheBtn btn";
+        supprFicheBtn.className = "supprFicheBtn btn delete";
 
 
         supprFiche.appendChild(supprFicheBtn);
@@ -166,29 +166,40 @@ export class UiFiches {
         const tagVille = document.createElement("div");
         tagVille.className = "main__fiche__title__tag";
         tagVille.textContent = fiche.ville;
-        tagsContainer.appendChild(tagVille);
+        if (fiche.ville !== undefined && fiche.ville !== "" && fiche.ville !== null) {
+            tagsContainer.appendChild(tagVille);
+        }
 
         const tagContract = document.createElement("div");
         tagContract.className = "main__fiche__title__tag";
         tagContract.textContent = fiche.contract;
-        tagsContainer.appendChild(tagContract);
+        if (fiche.contract !== undefined && fiche.contract !== "" && fiche.contract !== null) {
+            tagsContainer.appendChild(tagContract);
+        }
 
         const tagDurée = document.createElement("div");
         tagDurée.className = "main__fiche__title__tag";
         tagDurée.textContent = fiche.durée;
-        tagsContainer.appendChild(tagDurée);
+        if (fiche.durée !== undefined && fiche.durée !== "" && fiche.durée !== null) {
+            tagsContainer.appendChild(tagDurée);
+        }
+
 
         const tagExperience = document.createElement("div");
         tagExperience.className = "main__fiche__title__tag";
         tagExperience.textContent = fiche.experience;
-        tagsContainer.appendChild(tagExperience);
+        if (fiche.experience !== undefined && fiche.experience !== "" && fiche.experience !== null) {
+            tagsContainer.appendChild(tagExperience);
+        }
 
         const tagTechno = document.createElement("div");
         tagTechno.className = "main__fiche__title__tag";
         tagTechno.textContent = fiche.techno;
         tagsContainer.appendChild(tagTechno);
+        if (fiche.techno !== undefined && fiche.techno !== "" && fiche.techno !== null) {
+            container.appendChild(tagsContainer);
+        }
 
-        container.appendChild(tagsContainer);
 
 
         // isBool

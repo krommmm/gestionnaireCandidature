@@ -1,27 +1,29 @@
-.titrePresentation{
-    text-align:center;
-    margin-top:50px;
+.titrePresentation {
+    text-align: center;
+    margin-top: 50px;
 }
 
 main {
     margin-bottom: 50px;
-    animation-duration:1s;
+    animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-name: topToBottom;
-    opacity:0;
-    width:60%;
+    opacity: 0;
+    width: 60%;
     padding-bottom: 30px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
-@keyframes topToBottom{
-    0%{
-        opacity:0;
-        transform:translateY(-100px);
+
+@keyframes topToBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
     }
-    100%{
-        opacity:1;
-        transform:translateY(0px);
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
 
@@ -34,20 +36,22 @@ main {
     box-shadow: 8px 0px 28px -11px black;
     border-radius: 15px;
     padding-bottom: 30px;
-    animation-duration:1s;
+    animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-name: rightToLeft;
-    opacity:0;
+    opacity: 0;
 }
-@keyframes rightToLeft{
-    0%{
-        opacity:0;
-        transform:translateX(100px);
+
+@keyframes rightToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
     }
-    100%{
-        opacity:1;
-        transform:translateX(0px);
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
     }
 }
 
@@ -72,6 +76,10 @@ main {
     font-size: 25px;
     font-weight: 600;
     margin: 21px;
+    word-wrap: break-word;
+    word-break: break-word;
+    max-width: 60%;
+    text-align: center;
 }
 
 .main__fiche__title__tags {
@@ -94,16 +102,24 @@ main {
 }
 
 .btn {
-   
-    
-    background-color: rgba(0, 0, 0, .5);
+
+
+     background-color: rgba(0, 0, 0, .5); 
     color: white;
     font-weight: 600;
     padding: 10px;
     cursor: pointer;
     border-radius: 3px;
-    margin:10px;
-    border-radius:5px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.delete {
+    background-color: red;
+}
+
+.faillure {
+    background-color: orange;
 }
 
 .validated {
@@ -119,14 +135,16 @@ main {
 .main__fiche__title__description p {
     width: 80%;
 }
-.deleteFiche_container{
-    width:100%;
-    display:flex;
-    justify-content:end;
+
+.deleteFiche_container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
 }
-.rond{
-    width:200px;
+
+.rond {
+    width: 200px;
     height: 200px;
     border-radius: 50%;
-    object-fit:cover;
+    object-fit: cover;
 }

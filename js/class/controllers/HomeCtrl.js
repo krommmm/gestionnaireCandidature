@@ -24,6 +24,14 @@ export class HomeCtrl {
     handleSubmit(e) {
         e.preventDefault();
         const ficheEnPreparation = this.modal.submitForm();
+        const names = this.fichesList.getFiches().map((cell)=>cell.name);
+        const cleanedNames = names.map((cell)=>(cell).toLowerCase().replace(" ",""));
+        if(cleanedNames.includes(ficheEnPreparation.name.toLowerCase().replace(" ",""))){
+            if (!confirm("Cette entreprise est déjà enregistrée, voullez-vous tout de même l'ajouter ? ")) {
+                return;
+            }
+        }
+        // if ficheEnPreparation.name 
         const fiche = this.fiche.create(this.fichesList.getId(), ficheEnPreparation, this.fichesList.getFiches());
         this.fichesList.addFiche(fiche);
         const generalId = this.fichesList.getId();
@@ -39,6 +47,9 @@ export class HomeCtrl {
         } else if (e.target.classList.contains("leaveModal")) {
             this.modal.close();
         } else if (e.target.classList.contains("deleteFiche")) {
+            if (!confirm("Etes-vous sur de vouloir classer cette fiche parmis les refusés? ")) {
+                return;
+            }
             const id = e.target.closest(".main__fiche").dataset.id;
             this.fichesList.delete(parseInt(id));
             const generalId = this.fichesList.getId();
@@ -47,6 +58,9 @@ export class HomeCtrl {
             this.uiFiches.displayFiche(this.pokemons, parseInt(id), this.fichesList.getFiches())
             this.uiFiches.displayFiches(this.pokemons, this.fichesList.getFiches());
         } else if (e.target.classList.contains("supprFicheBtn")) {
+            if (!confirm("Etes-vous sur de vouloir supprimer définitivement cette fiche ? ")) {
+                return;
+            }
             const id = e.target.closest(".main__fiche").dataset.id;
             this.fichesList.realDelete(id);
             const generalId = this.fichesList.getId();

@@ -16,6 +16,9 @@ export class FichesList {
 
     realDelete(id) {
         this.fiches =  this.fiches.filter((fiche) => !(parseInt(fiche.id) === parseInt(id)));
+        if(this.fiches.length<=0){
+            this.id=0;
+        }
     }
 
     getFiches() {
