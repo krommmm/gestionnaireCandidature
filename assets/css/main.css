@@ -116,13 +116,13 @@ main {
 .delete {
     background-color: red;
     z-index: 5;
-    border: 3px solid white;
+    border: 2px solid white;
 }
 
 .faillure {
     background-color: orange;
     z-index: 5;
-    border: 3px solid white;
+    border: 2px solid white;
 }
 
 .validated {
