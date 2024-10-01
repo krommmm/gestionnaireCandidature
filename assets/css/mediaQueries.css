@@ -1,0 +1,10 @@
+@media screen and (max-width:940px){
+    .general{
+        display:flex;
+        flex-direction:column;
+    }
+
+    body nav, body aside, body main{
+        width:100%;
+    }
+}

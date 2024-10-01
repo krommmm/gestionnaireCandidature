@@ -102,9 +102,7 @@ main {
 }
 
 .btn {
-
-
-     background-color: rgba(0, 0, 0, .5); 
+    background-color: rgba(0, 0, 0, .5);
     color: white;
     font-weight: 600;
     padding: 10px;
@@ -116,10 +114,14 @@ main {
 
 .delete {
     background-color: red;
+    z-index: 5;
+    border: 3px solid white;
 }
 
 .faillure {
     background-color: orange;
+    z-index: 5;
+    border: 3px solid white;
 }
 
 .validated {
