@@ -229,6 +229,10 @@ export class UiFiches {
         boolContainer.appendChild(btnValidated);
         container.appendChild(boolContainer);
 
+        const divText = document.createElement("div");
+        divText.className="text";
+        container.appendChild(divText);
+
         // description
         const descriptionContainer = document.createElement("div");
         descriptionContainer.className = "main__fiche__title__description";
