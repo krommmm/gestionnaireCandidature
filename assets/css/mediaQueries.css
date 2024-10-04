@@ -28,7 +28,7 @@
         margin-bottom: 15px;
     }
 
-    body .header__links img {
+    body .header__links img, body .header__links .jobijoba {
         width: 30px;
         height: 30px;
     }

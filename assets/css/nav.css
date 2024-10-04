@@ -1,24 +1,26 @@
 nav {
     margin-top: 50px;
-    animation-duration:1s;
+    animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-name: leftToRight;
-    opacity:0;
+    opacity: 0;
     /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
     padding: 5px;
     /* margin:15px 15px 15px 0px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px; */
 }
-@keyframes leftToRight{
-    0%{
-        opacity:0;
-        transform:translateX(-100px);
+
+@keyframes leftToRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
     }
-    100%{
-        opacity:1;
-        transform:translateX(0px);
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
     }
 }
 
@@ -37,4 +39,25 @@ nav div:hover {
     background: rgba(0, 0, 0, .1);
     /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
     cursor: pointer;
+}
+
+.jobijoba {
+    background-color: #f23e5e;
+    color: white;
+    font-weight: 600;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+    margin-left: 14px;
+}
+
+.header__links a {
+    text-decoration: none;
+}
+.header__links{
+    display:flex;
+    flex-wrap:wrap;
 }
