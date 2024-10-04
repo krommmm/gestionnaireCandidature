@@ -46,11 +46,13 @@ aside {
 }
 
 .aside__fiches_fiche {
-    border: 1px solid black;
-    margin: 5px;
+    margin: 9px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     cursor: pointer;
     display: flex;
     align-items: center;
+    padding: 5px;
+    transition-duration:.8s;
 }
 
 .aside__fiches_fiche img {
@@ -58,11 +60,12 @@ aside {
     height: 30px;
     margin-left: 15px;
     object-fit: fill;
-
+    margin-right: 3px;
 }
 
 .aside__fiches_fiche:hover {
     background-color: rgba(0, 0, 0, .1);
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
 
 
@@ -71,6 +74,8 @@ aside {
     padding: 5px;
     word-wrap: break-word;
     word-break: break-word;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.8);
 }
 
 .aside__tris div:hover {
