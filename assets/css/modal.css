@@ -1,5 +1,6 @@
 .modalFiche {
     backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, .5);
     position: absolute;
     top: 0px;
     right: 0px;
@@ -9,20 +10,22 @@
     justify-content: center;
     align-items: center;
     display: none;
-    animation-duration:1s;
+    animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     animation-name: leftToRight;
-    opacity:0;
+    opacity: 0;
 }
-@keyframes leftToRight{
-    0%{
-        opacity:0;
-        transform:translateX(-100px);
+
+@keyframes leftToRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
     }
-    100%{
-        opacity:1;
-        transform:translateX(0px);
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
     }
 }
 
@@ -30,7 +33,8 @@
     background-color: white;
     width: 50%;
     padding: 15px;
-    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 3px;
 }
 
 .modalFiche__container div {
@@ -44,7 +48,35 @@
 }
 
 textarea[name='description'] {
-    resize:none;
+    resize: none;
     width: 300px;
     height: 200px;
+}
+
+.modalFiche input {
+    width: 300px;
+    height: 25px;
+    padding-left:15px;
+}
+
+.modalFiche textarea {
+    padding: 15px 15px;
+}
+
+select {
+    padding: 5px;
+    background-color: white;
+}
+
+select option:hover {
+    background-color: red;
+}
+
+.modalFiche label {
+    font-weight: 600;
+    font-size: 17px;
+    margin-right: 15px;
+}
+.green{
+    background-color:green;
 }

@@ -32,7 +32,7 @@ main {
     flex-direction: column;
     align-items: center;
     width: 80%;
-    max-width:600px;
+    max-width: 600px;
     margin-top: 28px;
     box-shadow: 8px 0px 28px -11px black;
     border-radius: 15px;
@@ -119,6 +119,11 @@ main {
     border-radius: 5px;
 }
 
+.leaveModal {
+    background-color: red;
+    color: white;
+}
+
 .delete {
     background-color: red;
     z-index: 5;
@@ -145,7 +150,7 @@ main {
 
 .main__fiche__title__description p {
     width: 80%;
-    color:white;
+    color: white;
 }
 
 .deleteFiche_container {

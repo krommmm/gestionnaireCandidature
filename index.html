@@ -65,33 +65,25 @@
             <form>
                 <!-- inputs -->
                 <div>
-                    <label for="input-name">Nom</label>
+                    <label for="input-name">Nom:</label>
                     <input type="text" id="input-name" name="name" placeholder="name" />
                 </div>
+              
                 <div>
-                    <label for="input-contrat">Choisir un type de contrat</label>
-                    <Select id="input-contrat" name="contrat">
-                        <option value="cdd">CDD</option>
-                        <option value="cdi">CDI</option>
-                        <option value="stage">Stage</option>
-                        <option value="alternance">Alternance</option>
-                    </Select>
-                </div>
-                <div>
-                    <label for="input-ville">Ville</label>
+                    <label for="input-ville">Ville:</label>
                     <input type="text" id="input-ville" name="ville" placeholder="ville" />
                 </div>
                 <div>
-                    <label for="input-durée">Durée</label>
+                    <label for="input-durée">Durée:</label>
                     <input type="text" id="input-durée" name="durée" placeholder="durée" />
                 </div>
                 <div>
-                    <label for="input-salaire">Salaire</label>
+                    <label for="input-salaire">Salaire:</label>
                     <input type="text" id="input-salaire" name="salaire" placeholder="salaire" />
                 </div>
                 <!-- choix -->
                 <div>
-                    <label for="select-exp">Choisir une experience</label>
+                    <label for="select-exp">Choisir une experience:</label>
                     <Select id="select-exp" name="experience">
                         <option value="junior">Junior</option>
                         <option value="premierEmploi">1er emploi</option>
@@ -100,27 +92,36 @@
                     </Select>
                 </div>
                 <div>
-                    <label for="select-techno">Choisir une spécialité</label>
+                    <label for="select-techno">Choisir une spécialité:</label>
                     <Select id="select-techno" name="techno">
                         <option value="back">back</option>
                         <option value="front">front</option>
                         <option value="fullstack">fullstack</option>
                     </Select>
                 </div>
+                <div>
+                    <label for="input-contrat">Choisir un type de contrat:</label>
+                    <Select id="input-contrat" name="contrat">
+                        <option value="cdd">CDD</option>
+                        <option value="cdi">CDI</option>
+                        <option value="stage">Stage</option>
+                        <option value="alternance">Alternance</option>
+                    </Select>
+                </div>
                 <!-- checkbox -->
                 <div>
-                    <label for="checkbox-isPost">Is posted</label>
+                    <label for="checkbox-isPost">Is posted:</label>
                     <input type="checkbox" id="checkbox-isPost" name="isPost" />
                 </div>
                 <div>
-                    <label for="checkbox-isCalled">Is called</label>
+                    <label for="checkbox-isCalled">Is called:</label>
                     <input type="checkbox" id="checkbox-isCalled" name="isCalled" />
                 </div>
                 <div>
-                    <label for="textarea-description">Description</label>
+                    <label for="textarea-description">Description:</label>
                     <textarea id="textarea-description" name="description" placeholder="description"></textarea>
                 </div>
-                <button>Submit</button>
+                <button class="btn green">Submit</button>
             </form>
 
         </div>
