@@ -17,14 +17,16 @@ export class Modal {
         let isPost = formData.get("isPost");
         let isCalled = formData.get("isCalled");
         const description = formData.get("description");
+        const url = formData.get("url-Offer")
 
         isPost = isPost === "on" ? true : false;
         isCalled = isCalled === "on" ? true : false;
 
         document.querySelectorAll("input", "select").forEach((input) => input.value = "");
         this.close();
+        const date = new Date().getTime();
         return {
-            name: name, contract: contract, ville: ville, durée: durée, salaire: salaire, experience: experience, techno: techno, isPost: isPost, isCalled: isCalled, description: description
+            url: url, date: date, name: name, contract: contract, ville: ville, durée: durée, salaire: salaire, experience: experience, techno: techno, isPost: isPost, isCalled: isCalled, description: description
         }
 
     }

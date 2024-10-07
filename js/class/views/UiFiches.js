@@ -142,6 +142,17 @@ export class UiFiches {
         supprFicheBtn.textContent = "Supprimer la fiche";
         supprFicheBtn.className = "supprFicheBtn btn delete";
 
+        if (fiche.url) {
+            const urlA = document.createElement("a");
+            urlA.href = fiche.url;
+            const $urlBtnEl = document.createElement("p");
+            $urlBtnEl.className = "urlBtn btn";
+            $urlBtnEl.textContent = "url";
+            urlA.appendChild($urlBtnEl);
+            header.appendChild(urlA);
+        }
+
+
 
         supprFiche.appendChild(supprFicheBtn);
         header.appendChild(supprFiche);
@@ -230,8 +241,46 @@ export class UiFiches {
         container.appendChild(boolContainer);
 
         const divText = document.createElement("div");
-        divText.className="text";
+        divText.className = "text";
         container.appendChild(divText);
+
+        // Date
+
+        if (fiche.date) {
+
+            const date = new Date(fiche.date);
+            const diff = new Date().getTime() - fiche.date;
+            const hoursD = diff / (1000 * 3600);
+            const hoursLeft = hoursD % 24;
+            const daysD = parseInt(hoursD / 24);
+
+            let minutesString;
+            let minutesD = parseInt(diff / (1000 * 60));
+            if (minutesD <= 0) {
+                minutesString = "Moins d'une min";
+            } else {
+                minutesString = minutesD < 60 ? `${minutesD}min` : "";
+            }
+
+            let dayString = hoursD > 24 ? `${daysD} jours` : "";
+            let hoursString = hoursLeft >= 1 ? `${parseInt(hoursLeft)}h` : "";
+            const restString = `${dayString} ${hoursString} ${minutesString}`;
+
+
+            const $dateContainerEl = document.createElement("div");
+            $dateContainerEl.className = "dateContainer";
+            const $dateParaEl = document.createElement("p");
+            let dayOfMonth = date.getDate();
+            dayOfMonth = dayOfMonth <= 9 ? `0${dayOfMonth}` : dayOfMonth;
+            let month = date.getMonth() + 1;
+            month = month <= 9 ? `0${month}` : month;
+            const year = date.getFullYear();
+            const hours = date.getHours();
+            const minutes = date.getMinutes();
+            $dateParaEl.textContent = `${restString}`;
+            $dateContainerEl.appendChild($dateParaEl);
+            container.appendChild($dateContainerEl);
+        }
 
         // description
         const descriptionContainer = document.createElement("div");
@@ -263,3 +312,5 @@ export class UiFiches {
         return fiches;
     }
 }
+
+
