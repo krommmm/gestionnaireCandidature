@@ -28,7 +28,8 @@
         margin-bottom: 15px;
     }
 
-    body .header__links img, body .header__links .jobijoba {
+    body .header__links img,
+    body .header__links .jobijoba {
         width: 30px;
         height: 30px;
     }
@@ -42,36 +43,56 @@
         min-width: 0px;
         width: 170px;
     }
+
     .modalFiche__container {
         width: 90%;
     }
+
     textarea[name="description"] {
         resize: none;
         width: 100%;
         height: 200px;
-      }
-      body aside{
-        height: 280px;
-      }
-      body .aside__fiches_fiche{
-        max-width: 600px;
-        min-width:300px;
-      }
-      body .aside__fiches{
-        display:flex;
-        flex-direction:column;
-        align-items: center;
-      }
-      body .card{
-        width:100%;
-        box-shadow:none;
-        max-width:100%;
-        min-width:100%;
-        border-radius:0px;
-      }
-      body main{
-        box-shadow:none;
-        width:100%;
-      }
-}
+    }
 
+    body aside {
+        height: 280px;
+    }
+
+    body .aside__fiches_fiche {
+        max-width: 600px;
+        min-width: 300px;
+    }
+
+    body .aside__fiches {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body .card {
+        width: 100%;
+        box-shadow: none;
+        max-width: 100%;
+        min-width: 100%;
+        border-radius: 0px;
+    }
+
+    body main {
+        box-shadow: none;
+        width: 100%;
+    }
+
+    body aside {
+        scroll-behavior: none;
+        overflow-y: none;
+        height: auto;
+    }
+    body .aside__fiches{
+        height: 300px;
+        scroll-behavior: auto;
+        overflow-y: scroll;
+    }
+    body nav{
+        margin-top:0px;
+    }
+}
