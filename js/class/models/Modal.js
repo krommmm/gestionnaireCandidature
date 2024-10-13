@@ -39,3 +39,5 @@ export class Modal {
         document.querySelector(".modalFiche").style.display = "none";
     }
 }
+
+

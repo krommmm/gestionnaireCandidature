@@ -52,7 +52,7 @@ export class HomeCtrl {
             if (!confirm("Etes-vous sur de vouloir classer cette fiche parmis les refusés? ")) {
                 return;
             }
-            const id = e.target.closest(".main__fiche").dataset.id;
+            const id = e.target.closest(".card").dataset.id;
             this.fichesList.delete(parseInt(id));
             const generalId = this.fichesList.getId();
             this.localStorage.saveFiches(this.fichesList.getFiches());
@@ -63,7 +63,7 @@ export class HomeCtrl {
             if (!confirm("Etes-vous sur de vouloir supprimer définitivement cette fiche ? ")) {
                 return;
             }
-            const id = e.target.closest(".main__fiche").dataset.id;
+            const id = e.target.closest(".card").dataset.id;
             this.fichesList.realDelete(id);
             const generalId = this.fichesList.getId();
             this.localStorage.saveFiches(this.fichesList.getFiches());
@@ -119,7 +119,7 @@ export class HomeCtrl {
             const generalId = this.fichesList.getId();
             this.localStorage.saveFiches(this.fichesList.getFiches());
             this.localStorage.saveId(generalId);
-            const id = e.target.closest(".main__fiche").dataset.id;
+            const id = e.target.closest(".card").dataset.id;
             this.uiFiches.displayFiche(this.pokemons, parseInt(id), fiches)
         } else if (e.target.classList.contains("isCalled")) {
             const fiches = this.uiFiches.toogleIsCalled(e, this.fichesList.getFiches());
@@ -127,7 +127,7 @@ export class HomeCtrl {
             const generalId = this.fichesList.getId();
             this.localStorage.saveFiches(this.fichesList.getFiches());
             this.localStorage.saveId(generalId);
-            const id = e.target.closest(".main__fiche").dataset.id;
+            const id = e.target.closest(".card").dataset.id;
             this.uiFiches.displayFiche(this.pokemons, parseInt(id), fiches)
         }
     }
