@@ -247,6 +247,9 @@ main {
 .card__header ul {
     margin-left: 15px;
 }
+.card__header ul li{
+    text-transform:capitalize;
+}
 
 .card__header img {
     width: 100px;
