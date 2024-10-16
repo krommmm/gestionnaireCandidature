@@ -129,6 +129,9 @@ export class HomeCtrl {
             this.localStorage.saveId(generalId);
             const id = e.target.closest(".card").dataset.id;
             this.uiFiches.displayFiche(this.pokemons, parseInt(id), fiches)
+        }else if(e.target.classList.contains("exempleCandidature")){
+            this.localStorage.addSampleFiches();
+            window.location.reload();
         }
     }
 

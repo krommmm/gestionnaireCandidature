@@ -194,9 +194,8 @@ main {
 }
 
 .dateContainer p {
-    color: black;
+    color: rgba(0,0,0,.5);
     font-weight: 600;
-    border: 1px solid black;
     padding: 5px;
     border-radius: 8px;
     margin: 7px;
@@ -204,10 +203,22 @@ main {
 
 .urlBtn {
     color: white;
-    position: absolute;
-    top: 0px;
-    left: 0px;
     border: 1px solid white;
+    background-color: #35ac85;
+    width: 47px;
+}
+.exempleCandidature{
+    width: 198px;
+  height: fit-content;
+  padding: 5px;
+  background-color:#35ac85;
+  color:white;
+  font-weight:600;
+  border: 1px solid white;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 5px;
 }
 
 .card {
