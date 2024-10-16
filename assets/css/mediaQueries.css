@@ -95,4 +95,10 @@
     body nav{
         margin-top:0px;
     }
+    body .modalFiche input {
+        width: 203px;
+      }
+      body .modalFiche label {
+        display:none;
+    }
 }
