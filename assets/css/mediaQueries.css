@@ -42,6 +42,9 @@
     body .addFicheNav {
         display: flex;
     }
+    body .aside__tris div {
+        font-size: 8px;
+      }
 
     body .card__header img {
         right: 1%;
