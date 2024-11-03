@@ -1,7 +1,7 @@
 @media screen and (max-width:940px) {
     .general {
         display: flex;
-        flex-direction: column-reverse;
+
     }
 
     body nav,
@@ -36,6 +36,10 @@
 
     body nav {
         align-items: center;
+        display: none;
+    }
+    body .addFicheNav{
+        display:flex;
     }
 
     body nav div {
@@ -59,8 +63,16 @@
     }
 
     body .aside__fiches_fiche {
-        max-width: 600px;
-        min-width: 300px;
+        width: 90%;
+    }
+
+    body .aside__fiches_fiche img {
+        width: 25px;
+        height: 25px;
+    }
+
+    body .aside__fiches_fiche h2 {
+        font-size: 15px;
     }
 
     body .aside__fiches {
@@ -80,6 +92,11 @@
     body main {
         box-shadow: none;
         width: 100%;
+        padding: 7px;
+    }
+    body .card__header img {
+        width: 50px;
+        height: 50px;
     }
 
     body aside {
@@ -87,18 +104,22 @@
         overflow-y: none;
         height: auto;
     }
-    body .aside__fiches{
+
+    body .aside__fiches {
         max-height: 300px;
         scroll-behavior: auto;
         overflow-y: scroll;
     }
-    body nav{
-        margin-top:0px;
+
+    body nav {
+        margin-top: 0px;
     }
+
     body .modalFiche input {
         width: 203px;
-      }
-      body .modalFiche label {
-        display:none;
+    }
+
+    body .modalFiche label {
+        display: none;
     }
 }

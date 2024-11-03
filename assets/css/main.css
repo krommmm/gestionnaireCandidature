@@ -138,8 +138,8 @@ main {
 }
 
 .validated {
-    background-color: #35ac85!important;
-    color:white!important;
+    background-color: #35ac85 !important;
+    color: white !important;
 }
 
 .main__fiche__title__description {
@@ -194,11 +194,15 @@ main {
 }
 
 .dateContainer p {
-    color: rgba(0,0,0,.5);
+    color: rgba(0, 0, 0, .5);
     font-weight: 600;
     padding: 5px;
     border-radius: 8px;
     margin: 7px;
+}
+
+.addFicheNav {
+    display: none;
 }
 
 .urlBtn {
@@ -207,25 +211,26 @@ main {
     background-color: #35ac85;
     width: 47px;
 }
-.exempleCandidature{
+
+.exempleCandidature {
     width: 198px;
-  height: fit-content;
-  padding: 5px;
-  background-color:#35ac85;
-  color:white;
-  font-weight:600;
-  border: 1px solid white;
-  padding: 10px;
-  cursor: pointer;
-  margin: 10px;
-  border-radius: 5px;
+    height: fit-content;
+    padding: 5px;
+    background-color: #35ac85;
+    color: white;
+    font-weight: 600;
+    border: 1px solid white;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     width: 80%;
-    height:fit-content;
+    height: fit-content;
     max-width: 600px;
     margin-top: 28px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -258,17 +263,18 @@ main {
 .card__header ul {
     margin-left: 15px;
 }
-.card__header ul li{
-    text-transform:capitalize;
+
+.card__header ul li {
+    text-transform: capitalize;
 }
 
 .card__header img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: rgba(255,255,255,.6);
+    background-color: rgba(255, 255, 255, .6);
     padding: 9px;
-    border: 1px solid rgba(0,0,0,.1);
+    border: 1px solid rgba(0, 0, 0, .1);
     position: absolute;
     right: 12%;
     top: 16px;
@@ -276,48 +282,51 @@ main {
 }
 
 .card__description {
-    background-image: linear-gradient(
-        40deg,
-        hsl(0deg 6% 87%) 0%,
-        hsl(0deg 6% 88%) 9%,
-        hsl(0deg 6% 89%) 18%,
-        hsl(0deg 6% 90%) 27%,
-        hsl(0deg 6% 91%) 36%,
-        hsl(0deg 6% 92%) 45%,
-        hsl(0deg 6% 93%) 53%,
-        hsl(0deg 6% 94%) 62%,
-        hsl(0deg 6% 96%) 70%,
-        hsl(0deg 6% 97%) 78%,
-        hsl(0deg 7% 98%) 86%,
-        hsl(0deg 7% 99%) 94%,
-        hsl(0deg 0% 100%) 100%
-      );
+    background-image: linear-gradient(40deg,
+            hsl(0deg 6% 87%) 0%,
+            hsl(0deg 6% 88%) 9%,
+            hsl(0deg 6% 89%) 18%,
+            hsl(0deg 6% 90%) 27%,
+            hsl(0deg 6% 91%) 36%,
+            hsl(0deg 6% 92%) 45%,
+            hsl(0deg 6% 93%) 53%,
+            hsl(0deg 6% 94%) 62%,
+            hsl(0deg 6% 96%) 70%,
+            hsl(0deg 6% 97%) 78%,
+            hsl(0deg 7% 98%) 86%,
+            hsl(0deg 7% 99%) 94%,
+            hsl(0deg 0% 100%) 100%);
     padding: 30px 0px;
     padding: 30px;
 }
-.description_main{
+
+.description_main {
     font-family: 'Fredoka', sans-serif;
-                                                
+
 }
-.card__buttons button{
+
+.card__buttons button {
     background-color: #fff17f;
-  padding: 7px;
-  margin: 5px;
-  border-radius: 3px;
-  border: 1px solid black;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  color: rgba(0, 0, 0, 0.8);
-  font-weight: 600;
+    padding: 7px;
+    margin: 5px;
+    border-radius: 3px;
+    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 600;
 }
-.white{
+
+.white {
     background-color: white;
     color: black;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     width: 100px;
 }
-.card__description__is{
-    margin:20px 0px;
+
+.card__description__is {
+    margin: 20px 0px;
 }
-.card__buttons{
+
+.card__buttons {
     margin: 20px 0px;
 }
